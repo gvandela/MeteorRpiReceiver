@@ -72,6 +72,19 @@ log.addHandler(fh)
 logging.debug("-----------------------------------------------------------------------------------------------")
 logging.debug(datetime.datetime.now().strftime(script_name + ' (no doppler) started on %d/%m/%y at local %H:%M'))
 
+# Check if all expected directories exist & create if not
+if not os.path.exists(os.path.join(main_folder, 'Data')):
+	os.makedirs(os.path.join(main_folder, 'Data'))
+	logging.debug('Created Data directory')
+
+if not os.path.exists(os.path.join(main_folder, 'Images')):
+	os.makedirs(os.path.join(main_folder, 'Images'))
+	logging.debug('Created Images directory')
+
+if not os.path.exists(os.path.join(main_folder, 'TLE')):
+	os.makedirs(os.path.join(main_folder, 'TLE'))
+	logging.debug('Created TLE directory')
+
 # GRC script to launch
 #grc_script = './GRC/METEOR_M2_v05.py'
 #grc_script = './GRC/METEOR_M2_v05_noGUI.py'
