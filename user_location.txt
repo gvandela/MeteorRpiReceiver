@@ -1,0 +1,2 @@
+your longitude (East is positive)
+your latitude (North is positive)
