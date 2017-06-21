@@ -4,7 +4,7 @@
 scheduler_v0.2.8 is a copy of v0.2:
 	but running w/o doppler correction
 	grouped all that is required in seperate directory
-	launching decoder after capture
+	launching decoder after capture, with option -Q
 	removing old .s files
 	launching image processing after decoding
 	send e-mail with processed images
@@ -169,9 +169,9 @@ def decode_capture():
 				output_file = os.path.join(mypath, file[:-2])	# remove last 2 characters, i.e. the .s extension
 				os.chdir(main_folder)
 				if platform.machine() == 'x86_64':
-					medet_command = './Decoder/medet' + " " + LRPT_soft + " " + output_file	# if on linux64
+					medet_command = './Decoder/medet' + " " + LRPT_soft + " " + output_file + " -Q"	# if on linux64
 				elif platform.machine().startswith('arm'):
-					medet_command = './Decoder/medet_arm' + " " + LRPT_soft + " " + output_file	# if on rpi
+					medet_command = './Decoder/medet_arm' + " " + LRPT_soft + " " + output_file + " -Q"	# if on rpi
 				else:
 					logging.error('platform unsupported by decoder')
 					return 'none'		# I'm not sure what else to do here...
