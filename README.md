@@ -8,7 +8,7 @@ This project uses a good ol' DVB-T stick and gnuradio to capture the raw data. T
 The only part which is a bit harder to get over-the-counter is the antenna. I would recommend a QFH antenna, but e.g. crossed dipoles seem to render good results for others. Plans to build them are scattered across the internet.
 
 The 'scheduler' python script is all you need to run. For now, it does need to be in a specific directory, but edit to suit your wishes:
-"~/Projects/Python_projects/Meteor_reciever"
+"~/Projects/Python_projects/Meteor_receiver"
 The script will:
 - create a log file
 - create the Data, Images and TLE directories if they don't exist
