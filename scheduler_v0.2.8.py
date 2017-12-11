@@ -253,12 +253,14 @@ def email_image(file_name):
 		fp = open(image_122, 'rb')
 		img = MIMEImage(fp.read())
 		fp.close()
+		img.add_header('Content-Disposition', 'attachment', filename=file_name + '_122.jpg')
 		msg.attach(img)
 
 		image_555 = os.path.join(main_folder, 'Images', file_name + '_555_IR.jpg')
 		fp = open(image_555, 'rb')
 		img = MIMEImage(fp.read())
 		fp.close()
+		img.add_header('Content-Disposition', 'attachment', filename=file_name + '_555_IR.jpg')
 		msg.attach(img)
 
 		try:
