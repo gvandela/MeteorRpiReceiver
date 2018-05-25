@@ -18,7 +18,8 @@ The script will:
 - wait for the satellite to disappear under the horizon again
 - stop the GRC script
 - decode the raw data using medet_arm by Artlav
-- process the raw image (if any was decoded) into a daytime and nighttime image (122 & 555)
+- detect which channels are active
+- process the raw images (if any was decoded) into RGB combinations of the active channels (122, 123, 124, 555, 666)
 - e-mail the processed images from an e-mail address specified in 'email_config.txt' (you need to modify this file)
   to all e-mail addresses listed in mail_list.txt (you need to modify this file as well)
 - calculate and wait for the satellite to appear above the horizon again
