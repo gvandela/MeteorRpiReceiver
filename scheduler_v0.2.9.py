@@ -305,8 +305,8 @@ def process_image(image_1, image_2):
         if (active_channels[4] == 1):
             image_dir = os.path.join(main_folder, 'Images', image_1 + '_555.jpg')
             image = Image.merge("RGB", (ch_4, ch_4, ch_4))
-            image = ImageOps.invert(image_ir)
-            image = ImageOps.autocontrast(image_ir)      
+            image = ImageOps.invert(image)
+            image = ImageOps.autocontrast(image)      
             #thermal information gets lost here, but we get better looking images
             image.save(image_dir, quality=90, subsampling=0)
             list_of_images.append(image_dir)
@@ -314,8 +314,8 @@ def process_image(image_1, image_2):
         if (active_channels[5] == 1):
             image_dir = os.path.join(main_folder, 'Images', image_1 + '_666.jpg')
             image = Image.merge("RGB", (ch_5, ch_5, ch_5))
-            image = ImageOps.invert(image_ir)
-            image = ImageOps.autocontrast(image_ir)
+            image = ImageOps.invert(image)
+            image = ImageOps.autocontrast(image)
             #thermal information gets lost here, but we get better looking images
             image.save(image_dir, quality=90, subsampling=0)
             list_of_images.append(image_dir)
