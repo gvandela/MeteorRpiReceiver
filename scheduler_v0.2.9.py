@@ -196,9 +196,9 @@ def decode_capture():
 
             else:
                 #remove old .s files
-                # os.remove(os.path.join(mypath, file))
-                # logging.debug('removed old file %s' % os.path.join(mypath, file))
-                logging.debug('would have removed old file %s' % os.path.join(mypath, file))
+                os.remove(os.path.join(mypath, file))
+                logging.debug('removed old file %s' % os.path.join(mypath, file))
+                #logging.debug('would have removed old file %s' % os.path.join(mypath, file))
 
     if valid_file == True:
         file_name_1 = os.path.basename(output_file_1)
