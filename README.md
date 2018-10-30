@@ -1,7 +1,23 @@
 # MeteorRpiReceiver
-A set of python scripts to automatically capture, decode &amp; e-mail Meteor-M2 satellite images
+## Installation
+If you've got Python installed and your SDR ready installation is as follows:
+´´´
+sudo apt install gnuradio gr-osmosdr
+sudo pip install psutil ephem 
+git clone https://github.com/gvandela/MeteorRpiReceiver.git
+´´´
+## Configuration
+1. Set your location in ```user_location.txt```
+0. your email configuration in ```email_config.txt```
+0. add someone to the mailing list ```mail_list.txt```
+0. Great! You now have set up your MeteorReceiver.
 
-These scripts have been written to run on a Raspberry Pi 3 model B.
+## Execution
+To run this Receiver, simply run ```python ./scheduler_v0.2.9.py```.
+
+## What is this Project?
+This project is a set of python scripts to automatically capture, decode &amp; e-mail Meteor-M2 satellite images.
+These scripts have been written to run on a Raspberry Pi 3 model B, if you run them in a different environment without problems or with customizations, let me know.
 
 This project uses a good ol' DVB-T stick and gnuradio to capture the raw data. The processing of the raw data is performed by 'medet' (medet_arm in this case) developed by Artlav.
 
